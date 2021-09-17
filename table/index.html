@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="SHORCUT ICON" href="/img/icon.png" type="png">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <title>Table</title>
+</head>
+
+<body>
+    <!--Creating the table-->
+    <div class="wrapper">
+        <table id="table" class="table">
+            <!--Table header-->
+            <thead>
+                <tr class="bg-info">
+                    <th class="first-title" data-column="firstname" data-order="desc">First Name</th>
+                    <th class="second-title" data-column="lastname" data-order="desc">Last Name</th>
+                    <th class="third-title" data-column="eyeColor" data-order="desc">Eye color</th>
+                    <th class="fourth-title" data-column="about" data-order="desc">Description</th>
+                </tr>
+            </thead>
+            <!--Tag for a table with data from the database-->
+            <tbody id="myTable">
+            </tbody>
+        </table>
+        <!--Buttons for scrolling through the table-->
+        <div class="btns-cont">
+            <button class="prev">Prev</button>
+            <button class="next">Next</button>
+        </div>
+        <!--Form for hiding and displaying columns-->
+        <div class="checkboxes">
+            <p class="checkboxes__title">Which column do you want to hide?</p>
+            <p><input id="firstCheckBox" type="checkbox">First Name</p>
+            <p><input id="secondCheckBox" type="checkbox">Last Name</p>
+            <p><input id="thirdCheckBox" type="checkbox">Eye color</p>
+            <p><input id="fourthCheckBox" type="checkbox">About</p>
+        </div>
+        <!--Form for editing table data-->
+        <div data-state="hide" class="form">
+            <span class="close"><img src="/img/free-icon-close-cross-64498.svg" alt="close"></span>
+            <input type="text" name="firstname" id="fname" placeholder="First name">
+            <input type="text" name="lastname" id="lname" placeholder="Last name">
+            <input type="text" name="eyecolor" id="ecolor" placeholder="Eye color">
+            <textarea name="about" placeholder="About" id="descr"></textarea>
+            <button class="edit">Edit</button>
+        </div>
+    </div>
+
+    <!--Connecting scripts-->
+    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/db.json"></script>
+</body>
+
+</html>
